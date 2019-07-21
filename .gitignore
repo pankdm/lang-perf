@@ -2,6 +2,7 @@
 bin/
 build/
 cython/build/
+rust/target/
 
 # Prerequisites
 *.d
