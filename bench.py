@@ -15,6 +15,7 @@ RUN_SCRIPTS = {
     "kotlin_jit_5": "./kotlin/run_jit_5.sh",
     "cython_bfs": "./cython/run.sh",
     "cython_full": "./cython/run_full.sh",
+    "rust": "./rust/run.sh",
 }
 
 

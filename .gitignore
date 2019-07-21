@@ -2,7 +2,9 @@
 bin/
 build/
 cython/build/
+cython/cython_class.cpp
 rust/target/
+
 
 # Prerequisites
 *.d

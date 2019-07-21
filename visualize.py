@@ -75,14 +75,19 @@ x = range(len(maps_list))
 
 fig, ax = plt.subplots()
 
-palette = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'skyblue']
+palette = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'skyblue', 'burlywood']
 num = 0
 for tag in data.keys():
     y = get_values_list(data[tag], maps_list, data["cpp"])
     c = palette[num]
-    # ax.semilogy(x, y, marker='o', color=c, label=tag)
-    plt.plot(x, y, marker='o', color=c, label=tag)
+
+    LOG_SCALE = False
+    if LOG_SCALE:
+        ax.semilogy(x, y, marker='o', color=c, label=tag)
+    else:
+        plt.plot(x, y, marker='o', color=c, label=tag)
+
     num += 1
 ax.grid()
 plt.legend(loc=1, ncol=2)
-# plt.show()
+plt.show()
