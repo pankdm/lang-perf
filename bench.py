@@ -5,7 +5,6 @@ import subprocess
 
 
 RESULTS_FILE = "results.txt"
-
 RUN_SCRIPTS = {
     "cpp": "./cpp/run.sh",
     "python": "./python/run.sh",
@@ -17,6 +16,17 @@ RUN_SCRIPTS = {
     "cython_full": "./cython/run_full.sh",
     "rust": "./rust/run.sh",
 }
+
+
+# RESULTS_FILE = "results-rust.txt"
+# RUN_SCRIPTS = {
+#     "cpp": "./cpp/run.sh",
+#     "cpp1": "./cpp/run.sh",
+#     "cpp2": "./cpp/run.sh",
+#     "rust": "./rust/run.sh",
+#     "rust1": "./rust/run.sh",
+#     "rust2": "./rust/run.sh",
+# }
 
 
 def extract_tags(lines):

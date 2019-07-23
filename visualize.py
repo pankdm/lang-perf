@@ -14,7 +14,15 @@ data = defaultdict(dict)
 maps = {}
 map_infos = {}
 
-f = open('results.txt', 'r')
+# RESULTS_FILE = 'results-rust.txt'
+# palette = ['b', 'b', 'b', 'skyblue', 'skyblue', 'skyblue']
+
+RESULTS_FILE = 'results.txt'
+palette = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'skyblue', 'burlywood']
+
+
+
+f = open(RESULTS_FILE, 'r')
 total = 0
 for line in f.xreadlines():
     j = json.loads(line)
@@ -75,9 +83,9 @@ x = range(len(maps_list))
 
 fig, ax = plt.subplots()
 
-palette = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'skyblue', 'burlywood']
+
 num = 0
-for tag in data.keys():
+for tag in sorted(data.keys()):
     y = get_values_list(data[tag], maps_list, data["cpp"])
     c = palette[num]
 
